@@ -1,0 +1,74 @@
+server:
+  port: 8080
+
+waflow:
+  whatsapp:
+    phone-number-id: ${WHATSAPP_PHONE_NUMBER_ID:123456789}
+    access-token: ${WHATSAPP_ACCESS_TOKEN:your-access-token}
+    verify-token: ${WHATSAPP_VERIFY_TOKEN:your-verify-token}
+    webhook-path: /webhook
+
+  session:
+    timeout: PT24H
+
+  plugins:
+    services:
+      enabled: true
+
+  payment:
+    default-gateway: momo
+
+spring:
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+
+business:
+  name: "Abra Beauty Studio"
+  phone: "+233XXXXXXXXX"
+  currency: GHS
+  timezone: Africa/Accra
+
+  services:
+    - id: bridal
+      name: "Bridal Makeup"
+      description: "Complete bridal makeup package including trial session"
+      price: 500.00
+      duration: 120
+      category: makeup
+
+    - id: party
+      name: "Party Makeup"
+      description: "Glam look for parties and events"
+      price: 200.00
+      duration: 60
+      category: makeup
+
+    - id: natural
+      name: "Natural Glam"
+      description: "Subtle, everyday glam look"
+      price: 150.00
+      duration: 45
+      category: makeup
+
+    - id: braids
+      name: "Box Braids"
+      description: "Classic box braids, medium length"
+      price: 250.00
+      duration: 180
+      category: hair
+
+    - id: cornrows
+      name: "Cornrows"
+      description: "Stylish cornrow patterns"
+      price: 150.00
+      duration: 120
+      category: hair
+
+    - id: lashes
+      name: "Lash Extensions"
+      description: "Full set of individual lash extensions"
+      price: 100.00
+      duration: 60
+      category: beauty
