@@ -23,7 +23,7 @@ public class WhatsAppProperties {
     private String webhookPath = "/webhook";
 
     /** WhatsApp Cloud API version. */
-    private String apiVersion = "v18.0";
+    private String apiVersion = "v22.0";
 
     /** Graph API base URL. */
     private String baseUrl = "https://graph.facebook.com";
